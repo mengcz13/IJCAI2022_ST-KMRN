@@ -1,0 +1,107 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: driver",
+            "type": "python",
+            "request": "launch",
+            "program": "driver.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--alpha",
+                "1",
+                "--dataset",
+                "pendulum_lin",
+                "--noise",
+                "0.0",
+                "--lr",
+                "1e-2",
+                "--epochs",
+                "600",
+                "--batch",
+                "64",
+                "--folder",
+                "results_det_pendulum_lin_6",
+                "--lamb",
+                "1",
+                "--steps",
+                "8",
+                "--bottleneck",
+                "6",
+                "--lr_update",
+                "30",
+                "200",
+                "400",
+                "500",
+                "--lr_decay",
+                "0.2",
+                "--pred_steps",
+                "1000",
+                "--backward",
+                "0",
+                "--seed",
+                "1"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                "WANDB_MODE": "disabled"
+            }
+        },
+        {
+            "name": "Python: driver multires",
+            "type": "python",
+            "request": "launch",
+            "program": "driver_multires.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--data",
+                "../../data/nyc_taxi/manhattan",
+                "--seq_in_len",
+                "1440",
+                "--seq_out_len",
+                "480",
+                "--seq_diff",
+                "48",
+                "--single_res_input_output",
+                "--alpha",
+                "8",
+                "--lr",
+                "1e-3",
+                "--epochs",
+                "600",
+                "--batch",
+                "64",
+                "--batch_test",
+                "64",
+                "--folder",
+                "test/multires",
+                "--steps",
+                "480",
+                "--steps_back",
+                "480",
+                "--bottleneck",
+                "128",
+                "--backward",
+                "1",
+                "--pred_steps",
+                "480",
+                "--seed",
+                "42"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "2",
+                "WANDB_MODE": "disabled"
+            }
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: exp",
+            "type": "python",
+            "request": "launch",
+            "program": "train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--gcn_bool",
+                "--adjtype",
+                "doubletransition",
+                "--addaptadj",
+                "--randomadj",
+                "--data",
+                "../../data/nyc_taxi/manhattan",
+                "--seq_in_len",
+                "1440",
+                "--seq_out_len",
+                "480",
+                "--batch_size",
+                "4",
+                "--epochs",
+                "1"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "1"
+            }
+        }
+    ]
+}
