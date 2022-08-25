@@ -1,4 +1,17 @@
-# Instructions for Reproducing Main Results
+# Physics-Informed Long-Sequence Forecasting From Multi-Resolution Spatiotemporal Data
+
+This repository is the official PyTorch implementation of "Cross-Node Federated Graph Neural Network for Spatio-Temporal Modeling". [\[PDF\]](https://www.ijcai.org/proceedings/2022/0304.pdf)
+
+## Bibtex
+
+```bibtex
+@inproceedings{meng2022physics,
+  title={Physics-Informed Long-Sequence Forecasting From Multi-Resolution Spatiotemporal Data},
+  author={Meng, Chuizheng and Niu, Hao and Habault, Guillaume and Legaspi, Roberto and Wada, Shinya and Ono, Chihiro and Liu, Yan},
+  booktitle={Proceedings of the Thirty-First International Joint Conference on Artificial Intelligence},
+  year={2022}
+}
+```
 
 ## Environment
 ```bash
