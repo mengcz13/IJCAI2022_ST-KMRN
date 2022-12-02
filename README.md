@@ -218,6 +218,6 @@ popd
 
 ## Reproduce Result Tables
 
-We use `multitask/results/gen_exp_results.ipynb` to print result tables in LaTeX format. 
+We use `results/gen_exp_results.ipynb` to print result tables in LaTeX format. 
 
-To reproduce the tables, replace paths in the `res_configs_dict` in `multitask/results/metric_utils.py` with paths storing corresponding experimental results.
+To reproduce the tables, replace paths in the `res_configs_dict` in `results/metric_utils.py` with paths storing corresponding experimental results.
